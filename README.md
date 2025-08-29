@@ -1,4 +1,4 @@
-# Simple-post-board
+# Simple-Postboard
 
 Welcome to the Simple blog app! 🚀
 
@@ -30,7 +30,7 @@ This is a dynamic web app for sharing your thoughts, learning experiences, and p
 4. **Open your browser:**
    Visit [http://localhost:5000](http://localhost:5000)
 
-## Why Express Postboard?
+## Why Simple Postboard?
 
 As a final year undergraduate, this project helped me learn Express.js routing and extend my backend skills. It’s a hands-on way to understand how web apps work, and you can easily customize it for your own needs!
 
