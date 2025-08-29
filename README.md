@@ -1,6 +1,6 @@
 # Simple-Postboard
 
-Welcome to the Simple blog app! 🚀
+Welcome to the Simple PostBoard! 🚀
 
 This is a dynamic web app for sharing your thoughts, learning experiences, and project updates. Built with Express.js and EJS, it's designed for students and developers who want a simple, interactive way to manage posts and showcase their journey.
 
