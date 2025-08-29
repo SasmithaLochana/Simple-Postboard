@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+<main>
+  <div class="container">
+  <% if (typeof error !== 'undefined' && error) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div>
+  <% } %>
+  <% if (posts && posts.length > 0) { %>
+  <h1>All Posts</h1>
+  <ul>
+    <% posts.forEach((post, idx) => { %>
+    <li class="list-item">
+      <a href="/posts/<%= idx %>"><%= post.title %></a>
+      <div class="list-item-btn">
+        <a href="/posts/<%= idx %>/edit-post"
+          ><button class="text-success border-1 border-success rounded"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit</button></a
+        >
+        <form action="/posts/<%= idx %>/delete" method="POST">
+          <button type="submit" class="text-danger border-1 border-danger rounded"><i class="fa-solid fa-trash mr-2"></i>Delete</button>
+        </form>
+      </div>
+    </li>
+    <% }) %>
+  </ul>
+  <% } else { %>
+  <p class="text-secondary mt-5">
+    This project is a simple Express and EJS-based blog app that lets users
+    create, view, edit, and delete posts without using a database, storing
+    everything in memory.
+  </p>
+  <a href="/create-post"><button class="submit-btn mt-3 8u">Create a new post<i class="fa-solid fa-plus ml-2"></i></button></a>
+  <% } %> 
+ 
+</div>
+</main>
+<footer><%- include("partials/footer.ejs") %></footer>
+

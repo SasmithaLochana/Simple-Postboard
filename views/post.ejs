@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+<h1><%= post.title %></h1>
+<p class="text-secondary"><%= post.message %></p>
+
+<div class="container">
+  <form action="/posts/<%= id %>/delete" method="POST">
+    <button type="submit" class="submit-btn"><i class="fa-solid fa-trash mr-2"></i>Delete Post</button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

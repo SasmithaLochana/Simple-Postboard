@@ -1,0 +1,118 @@
+
+html,body {
+  font-family: 'Poppins', Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+h1 {
+  margin-top: 5vmin;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #3586ff;
+  font-weight: 700;
+}
+
+.intro {
+  color: #000;
+  font-style: italic;
+}
+
+
+.list-item {
+  margin-bottom: 12px;
+  list-style-type: square;
+  
+}
+
+.list-item-btn button {
+  margin-left: 12px;
+}
+
+.list-item-btn {
+  gap: 8px;
+  display: inline-flex;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 5vmin;
+}
+
+
+.form-input {
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #3586ff;
+  transition: all 0.3s;
+  padding: 12px;
+  margin-bottom: 25px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #3586ff;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #3586ff;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+.submit-btn:hover {
+  transition: background 0.4s ease-in;
+  background: #5fa8ff;
+}
+
+.list-btn {
+  width: 50px;
+  background: #3586ff;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+.submit-btn:hover {
+  transition: background 0.4s ease-in;
+  background: #5fa8ff;
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #3586ff ;
+  border-radius: 50%;
+}
