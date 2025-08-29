@@ -9,14 +9,17 @@ const posts = [];
 
 app.use(express.static("public"));
 
+/* GET Method to render the home page */
 app.get("/", (req, res) => {
   res.render("index.ejs", { posts });
 });
 
+/* GET Method to render the create post page */
 app.get("/create-post", (req, res) => {
   res.render("create-post.ejs");
 });
 
+/* GET Method to render the post details to the post view page  */
 app.get("/posts/:id", (req, res) => {
   const post = posts[req.params.id];
 
@@ -26,6 +29,8 @@ app.get("/posts/:id", (req, res) => {
     res.status(404).send("Post not found");
   }
 });
+
+/* GET Method to render the post details to edit post page */
 
 app.get("/posts/:id/edit-post", (req, res) => {
   const post = posts[req.params.id];
@@ -37,10 +42,22 @@ app.get("/posts/:id/edit-post", (req, res) => {
   }
 });
 
+/* GET Method to render the about us page */
 app.get("/about-me", (req, res) => {
   res.render("about-me.ejs");
 });
 
+/* POST Method to save the post into the array */
+app.post("/create-post", (req, res) => {
+  const { title, message } = req.body;
+  if (posts.length >= 10) {
+    return res.render("index.ejs", { posts, error: "You can't add more than 10 posts. Please delete some and try again." });
+  }
+  posts.push({ title, message });
+  res.redirect("/");
+});
+
+/* POST Method to update the post details and save them into the array */
 app.post("/posts/:id/edit-post", (req, res) => {
   const id = req.params.id;
   const { title, message } = req.body;
@@ -53,20 +70,12 @@ app.post("/posts/:id/edit-post", (req, res) => {
   }
 });
 
+/* POST Method to remove the post from the array */
 app.post("/posts/:id/delete", (req, res) => {
   const id = req.params.id;
   if (posts[id]) {
     posts.splice(id, 1);
   }
-  res.redirect("/");
-});
-
-app.post("/create-post", (req, res) => {
-  const { title, message } = req.body;
-  if (posts.length >= 10) {
-    return res.render("index.ejs", { posts, error: "You can't add more than 10 posts. Please delete some and try again." });
-  }
-  posts.push({ title, message });
   res.redirect("/");
 });
 

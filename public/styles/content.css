@@ -18,8 +18,14 @@ h1 {
 }
 
 .intro {
-  color: #000;
+  font-size: 20px;
+  line-height: 2;
+}
+
+.about-me {
+  font-size: 20px;
   font-style: italic;
+  line-height: 2;
 }
 
 
